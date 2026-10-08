@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="authScreen" class="auth-container">
+        <h1>Tetris</h1>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="password">Senha</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <div class="auth-buttons">
+            <button id="registerButton" type="button">Criar conta</button>
+            <button id="loginButton" type="button">Entrar</button>
+        </div>
+        <p id="authMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="gameScreen" hidden>
+        <div class="account-bar">
+            <span>Conectado como <strong id="userEmail"></strong></span>
+            <button id="logoutButton" type="button">Sair</button>
+        </div>
+        <div class="main-container">
+            <div class="game-container">
+                <canvas id="tetrisCanvas"></canvas>
+            </div>
+            <div id="gameInfo">
+                <div id="score">Score: 0</div>
+                <button id="restartButton" style="display: none;">Restart</button>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
