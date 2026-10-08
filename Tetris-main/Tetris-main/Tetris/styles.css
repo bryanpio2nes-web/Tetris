@@ -1,0 +1,15 @@
+body { display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #000; color: #fff; font-family: Arial, sans-serif; }
+[hidden] { display: none !important; }
+.main-container { text-align: center; }
+.game-container { display: inline-block; position: relative; border: 2px solid #fff; }
+canvas { background: #000; }
+#gameInfo { margin-top: 20px; }
+#restartButton { margin: 20px 0 0 10px; padding: 10px 20px; background: #fff; color: #000; border: 0; cursor: pointer; }
+#restartButton:hover, .auth-container button:hover, .account-bar button:hover { background: #ccc; }
+.auth-container { width: min(340px, calc(100vw - 40px)); padding: 24px; border: 2px solid #fff; box-sizing: border-box; }
+.auth-container label { display: block; margin: 12px 0 6px; }
+.auth-container input { width: 100%; padding: 10px; box-sizing: border-box; color: #fff; background: #000; border: 1px solid #fff; font: inherit; }
+.auth-buttons { display: grid; gap: 10px; margin-top: 16px; }
+.auth-container button, .account-bar button { padding: 10px 16px; color: #000; background: #fff; border: 0; font: inherit; cursor: pointer; }
+#authMessage { overflow-wrap: anywhere; }
+.account-bar { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
