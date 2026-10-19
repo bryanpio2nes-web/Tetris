@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tetris — TetroMinó</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="theme-button" type="button" aria-label="Ativar modo noturno" title="Trocar tema">☾</button>
+  <nav class="sidebar" aria-label="Menu lateral">
+    <a class="side-button" href="Index.html" aria-label="Voltar para a página inicial" title="Início">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <button class="side-button" type="button" aria-label="Perfil" title="Perfil">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+    </button>
+  </nav>
+  <main class="main-container">
+    <h1>Tetris</h1>
+    <div class="game-layout">
+      <section class="board-panel" aria-label="Jogo">
+        <div class="game-container">
+          <canvas id="tetrisCanvas" aria-label="Tabuleiro do Tetris"></canvas>
+          <div id="gameOverOverlay" class="game-over-overlay" role="dialog" aria-label="Fim de jogo">
+            <p>Fim de jogo</p>
+            <button id="restartButton" type="button">Reiniciar</button>
+          </div>
+        </div>
+        <div id="gameInfo">
+          <span id="score">Pontos: 0</span>
+          <span id="highScore">Maior pontuação: 0</span>
+        </div>
+        <div class="next-piece" aria-label="Próxima peça" title="Próxima peça">
+          <canvas id="nextPieceCanvas" aria-label="Prévia da próxima peça"></canvas>
+        </div>
+      </section>
+    </div>
+    <img class="instructions-image instructions-day" src="img/instrucoes-diurno.png" alt="Instruções: seta para cima gira; setas esquerda e direita movem; seta para baixo desce; espaço faz a peça cair rapidamente.">
+    <img class="instructions-image instructions-night" src="img/instrucoes-noturno.png" alt="Instruções: seta para cima gira; setas esquerda e direita movem; seta para baixo desce; espaço faz a peça cair rapidamente.">
+  </main>
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
