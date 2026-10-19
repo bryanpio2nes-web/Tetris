@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TetroMinó — Jogos</title>
+<style>
+* { box-sizing: border-box; }
+:root { color-scheme: light; --page: #f3f6fa; --surface: #fff; --text: #263445; --muted: #68788c; --line: #e1e8f0; --accent: #354b68; }
+body { margin: 0; min-height: 100vh; background: var(--page); color: var(--text); font: 16px Arial, sans-serif; transition: background .2s, color .2s; }
+body.dark-theme { color-scheme: dark; --page: #260044; --surface: #410078; --text: #fff2c7; --muted: #e0c9f3; --line: #762bb0; --accent: #ffcc24; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 24px 7%; background: var(--surface); box-shadow: 0 2px 12px #1c123018; }
+h1 { margin: 0; color: var(--accent); font-size: 30px; }
+main { max-width: 1000px; margin: 48px auto; padding: 0 24px; }
+.intro { margin-bottom: 36px; }
+.intro h2 { margin: 0 0 10px; font-size: 26px; }
+.intro p { margin: 0; color: var(--muted); line-height: 1.6; }
+.games { display: flex; flex-wrap: wrap; gap: 22px; }
+.game-card { display: flex; width: 124px; flex-direction: column; align-items: center; gap: 10px; padding: 8px; text-align: center; text-decoration: none; color: var(--text); border-radius: 12px; transition: transform .15s; }
+.game-card:hover { transform: translateY(-4px); }
+.tile-icon { display: grid; place-items: center; width: 96px; height: 96px; background: #1688ed; border: 4px solid #0871cf; border-radius: 14px; box-shadow: 0 5px 12px #15385c30; }
+.tile-icon::after { content: ""; width: 0; height: 0; border-right: 25px solid transparent; border-bottom: 34px solid #0756a0; border-left: 25px solid transparent; filter: drop-shadow(0 2px 2px #064783); }
+.game-card strong { display: block; font-size: 20px; }
+footer { padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
+.theme-button { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: var(--page); color: var(--text); font-size: 21px; cursor: pointer; }
+.theme-button:hover { filter: brightness(.94); }
+</style>
+</head>
+<body>
+<header>
+  <h1>TetroMinó</h1>
+  <button class="theme-button" type="button" aria-label="Ativar modo noturno" title="Trocar tema">☾</button>
+</header>
+<main>
+  <section class="intro">
+    <h2>Escolha um jogo</h2>
+    <p>Um espaço simples para jogar e se divertir. Clique no jogo para começar.</p>
+  </section>
+  <section class="games" aria-label="Jogos disponíveis">
+    <a class="game-card" href="jogo.html" aria-label="Jogar Tetris">
+      <span class="tile-icon" aria-hidden="true"></span>
+      <strong>Tetris</strong>
+    </a>
+  </section>
+</main>
+<footer>Feito por Renan - Bryan - Ryan - Matheus</footer>
+<script src="theme.js"></script>
+</body>
+</html>
